@@ -4,6 +4,7 @@ var rename = require('gulp-rename');
 var miniCss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
+var csslint = require('gulp-csslint');
 
 
 gulp.task('default',['linting','imageconverter','minify']);
@@ -19,6 +20,12 @@ gulp.task('linting', function() {
 	.pipe(jshint())	
 	.pipe(jshint.reporter('default'))
 	.pipe(jshint.reporter('fail'));
+	
+	console.log('JS Hint done');
+	
+	gulp.src('src/css/styles.css')
+	.pipe(csslint())
+	.pipe(csslint.reporter());
 });
 
 gulp.task('minify', function() {

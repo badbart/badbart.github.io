@@ -3,15 +3,15 @@ body {
 	margin: auto;
 }
 
-header h1, header h3 {
+header {
 	font-family: 'Economica', sans-serif;
 }
 
-header h1 {
+top-header {
 	margin-bottom: 0;
 }
 
-header h3 {
+bottom-header {
 	margin-top: 0;
 }
 
