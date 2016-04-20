@@ -7,11 +7,11 @@ header {
 	font-family: 'Economica', sans-serif;
 }
 
-top-header {
+top_header {
 	margin-bottom: 0;
 }
 
-bottom-header {
+bottom_header {
 	margin-top: 0;
 }
 
@@ -50,7 +50,7 @@ bottom-header {
 	text-transform: uppercase;
 }
 
-.section-header {
+.section_header {
 	margin: 15px;
 	color: lightgray;
 }
