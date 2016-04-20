@@ -5,7 +5,7 @@ var miniCss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var csslint = require('gulp-csslint');
-var htmllint = require('gulp-htmllint');
+var html5Lint = require('gulp-html5-lint');
 var gutil = require('gulp-util');
 var imageResize = require('gulp-image-resize');
 
@@ -55,17 +55,7 @@ gulp.task('linting', function() {
 	console.log('CSS Lint done');
 	
 	gulp.src('index.html')
-	.pipe(htmllint({}, htmllintReporter));
-	
-	function htmllintReporter(filepath, issues) {
-	if (issues.length > 0) {
-		issues.forEach(function (issue) {
-			gutil.log(gutil.colors.cyan('[gulp-htmllint] ') + gutil.colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') + gutil.colors.red('(' + issue.code + ') ' + issue.msg));
-		});
- 
-		process.exitCode = 1;
-	}
-}
+	.pipe(html5Lint());
 
 });
 
