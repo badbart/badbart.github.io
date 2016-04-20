@@ -7,13 +7,36 @@ var jshint = require('gulp-jshint');
 var csslint = require('gulp-csslint');
 var htmllint = require('gulp-htmllint');
 var gutil = require('gulp-util');
+var imageResize = require('gulp-image-resize');
 
 
 gulp.task('default',['linting','imageconverter','minify']);
 
 gulp.task('imageconverter', function() {
 	console.log('ImageConverter Task started');
-});
+	
+	gulp.src('src/img/svg/logo.svg')
+	.pipe(gulp.dest('build/img/svg/'));
+	
+	[980,760,450].forEach(function(size) {
+		gulp.src('src/img/code.jpg')
+		.pipe(imageResize({
+			width: size,
+			quality: 0.80		
+		}))
+		.pipe(rename({
+			suffix: '.' + size
+		}))
+		.pipe(gulp.dest('build/img/'));
+	});
+
+	gulp.src(['src/img/game.jpg','src/img/portfolio.jpg','src/img/resume.png'])
+	.pipe(imageResize({
+			width: 350,
+			quality: 0.80		
+		}))
+	.pipe(gulp.dest('build/img/'));
+	});
 
 gulp.task('linting', function() {
 	console.log('Liniting Task started');
@@ -42,7 +65,7 @@ gulp.task('linting', function() {
  
 		process.exitCode = 1;
 	}
-};
+}
 
 });
 
