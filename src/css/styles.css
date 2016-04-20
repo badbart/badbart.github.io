@@ -3,15 +3,18 @@ body {
 	margin: auto;
 }
 
+
+/* Header */
+
 header {
-	font-family: 'Economica', sans-serif;
+	font-family: "Economica", sans-serif;
 }
 
 top_header {
 	margin-bottom: 0;
 }
 
-bottom_header {
+bottom-header {
 	margin-top: 0;
 }
 
@@ -26,20 +29,21 @@ bottom_header {
 	height: 100px;
 }
 
-.header_text {
+.header-text {
 	float: right;
 	text-align: right;
 }
+
+
+/* Images */
 
 .big {
 	width: auto;
 	margin: 20px 0;
 }
 
-.small {
-	max-width: 300px;
-	width: auto;
-}
+
+/* Featured Work */
 
 .work {
 	text-align: center;
@@ -49,7 +53,7 @@ bottom_header {
 	text-transform: uppercase;
 }
 
-.section_header {
+.section-header {
 	margin: 15px;
 	color: lightgray;
 }
