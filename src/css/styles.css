@@ -1,0 +1,32 @@
+body {
+	max-width: 960px;
+	margin: auto;
+}
+
+header h1, h3 {
+	font-family: 'Economica', sans-serif;
+}
+
+header h1 {
+	margin-bottom: 0;
+}
+
+header h3 {
+	margin-top: 0;
+}
+
+.break {
+	border-width: 2px;
+	border-color: darkgrey;
+	margin: 0;
+}
+
+.logo {
+	margin: 20px;
+	height: 100px;
+}
+
+.header_text {
+	float: right;
+	text-align: right;
+}
