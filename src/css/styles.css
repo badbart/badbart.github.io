@@ -3,7 +3,7 @@ body {
 	margin: auto;
 }
 
-header h1, h3 {
+header h1, header h3 {
 	font-family: 'Economica', sans-serif;
 }
 
@@ -29,4 +29,18 @@ header h3 {
 .header_text {
 	float: right;
 	text-align: right;
+}
+
+.big {
+	max-width: 960px;
+	width: auto;
+	margin: 20px 0;
+}
+
+.work {
+	text-align: center;
+}
+
+.item {
+	text-transform: uppercase;
 }
