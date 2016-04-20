@@ -37,10 +37,20 @@ header h3 {
 	margin: 20px 0;
 }
 
+.small {
+	max-width: 300px;
+	width: auto;
+}
+
 .work {
 	text-align: center;
 }
 
 .item {
 	text-transform: uppercase;
+}
+
+.section-header {
+	margin: 15px;
+	color: lightgray;
 }
