@@ -3,20 +3,26 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var miniCss = require('gulp-clean-css');
 var concat = require('gulp-concat');
+var jshint = require('gulp-jshint');
 
-gulp.task('default',['imageconverter','linting','minify']);
+
+gulp.task('default',['linting','imageconverter','minify']);
 
 gulp.task('imageconverter', function() {
-	console.log('ImageConverter Task started')
-	
+	console.log('ImageConverter Task started');
 });
 
 gulp.task('linting', function() {
-	console.log('Liniting Task started')
+	console.log('Liniting Task started');
+	
+	gulp.src('gulpfile.js')
+	.pipe(jshint())	
+	.pipe(jshint.reporter('default'))
+	.pipe(jshint.reporter('fail'));
 });
 
 gulp.task('minify', function() {
-	console.log('minify task started')
+	console.log('minify task started');
 	
 	gulp.src('src/js/*.js')
 	.pipe(concat('app.js'))
