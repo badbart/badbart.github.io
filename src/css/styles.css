@@ -1,4 +1,4 @@
-body {
+.container {
 	max-width: 960px;
 	margin: auto;
 }
@@ -10,7 +10,7 @@ header {
 	font-family: "Economica", sans-serif;
 }
 
-top_header {
+top-header {
 	margin-bottom: 0;
 }
 
@@ -38,7 +38,7 @@ bottom-header {
 /* Images */
 
 .big {
-	margin: 20px auto;	
+	margin: 20px auto;
 }
 
 
